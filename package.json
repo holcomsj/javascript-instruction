@@ -1,0 +1,15 @@
+{
+  "name": "javascript-instruction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ch02_prj1_java_strudent_registration.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
