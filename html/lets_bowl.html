@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="frame">Frames</label>
+    <p>Frame summary goes here</p>
+    <label for="total">Total</label>
+    <input id="theSummary" type="text" value="Score goes here">
+    <button onclick="bowl()">Bowl!</button>
+
+    <script>
+        function bowl() {
+            let frames = [];
+            let sum = 0;
+            for (let i = 1; i <= 10; i++) {
+                let turn = Math.floor(Math.random() * 10);
+                frames.push(turn);
+
+                sum += turn;
+            }
+            console.log(frames);
+            document.getElementById("theSummary").value = sum;
+            document.getElementsByTagName("p").innerHTML = frames;
+        }
+    </script>
+</body>
+
+</html>

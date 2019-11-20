@@ -27,12 +27,20 @@ function reverseArray(array) {
 }
 console.log(reverseArray([8, 6, 7, 5, 3, 0, 9]));
 
-// function reverseArrayInPlace(array) {
-//     for (let i = 0; i < array.length; i++) {
-//         temp = array.shift();
-//         array.push(temp);
-//     }
-//     return array;
-// }
-// console.log(reverseArrayInPlace([8, 6, 7, 5, 3, 0, 9]));
+
+function reverseArrayInPlace(array) {
+    //floorMid will be our loop increment max
+    let floorMid = Math.floor(array.length / 2);
+    for (let i = 0; i < floorMid; i++) {
+        //hold on to the value at idx i
+        let temp = array[i];
+        //declare the idx for the position to swap with
+        let swapIdx = array.length - 1 - i;
+        //swap idx
+        array[i] = array[swapIdx];
+        array[swapIdx] = temp;
+    }
+    console.log(array);
+}
+reverseArrayInPlace([8, 6, 7, 5, 3, 0, 9]);
 

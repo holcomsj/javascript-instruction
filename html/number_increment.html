@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <button onclick="decrement()">-</button>
+        <input id="theNbr" type="text" value="0">
+        <button onclick="increment()">+</button>
+
+        <script>
+        let nbr = 0;
+        let theNbr = document.getElementById("theNbr");
+        function decrement(){
+            nbr--;
+            theNbr.value = nbr;
+            assessNbr();
+        }
+
+        function increment(){
+            nbr++;
+            theNbr.value = nbr;
+            assessNbr();
+        }
+
+        function assessNbr(){
+            if (nbr % 2 == 0){
+                theNbr.style.color = "red";
+            }else{
+                theNbr.style.color = "black";
+            }
+            if (nbr % 3 == 0){
+                theNbr.style.fontStyle = "italic";
+            }else{
+                theNbr.style.fontStyle = "normal";
+            }
+
+            if (nbr % 7 == 0){
+                theNbr.style.fontSize = "2.5em";
+            }else{
+                theNbr.style.fontSize = "1em";
+            }
+        }
+        </script>
+</body>
+</html>
